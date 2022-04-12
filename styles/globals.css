@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .navBtn {
+        @apply hidden h-6 md:inline-flex cursor-pointer hover:scale-125 transition-all duration-150 ease-out;
+    }
+
+    .postBtn {
+        @apply h-7 hover:scale-125 cursor-pointer transition-all duration-150 ease-out;
+    }
+
+    .container {
+        position: relative;
+        @apply lg:m-3 m-1;
+    }
+
+    .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .2s ease;
+        backface-visibility: hidden;
+      }
+
+    .container:hover .image {
+        filter: brightness(50%);
+        @apply object-cover w-full cursor-pointer;
+    }
+
+    .container:hover .middle {
+        opacity: 1;
+    }
+
+    .middle {
+        transition: .2s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .text {
+        @apply flex items-center justify-center gap-5;
+    }
+
+    .text div {
+        @apply flex items-center justify-center gap-1;
+    }
+
+    .text span {
+        @apply text-xs lg:text-sm font-bold text-white;
+    }
+
+    .exploreIcon {
+        @apply h-4 w-4 lg:h-6 lg:w-6 font-bold text-white;
+    }
+}
